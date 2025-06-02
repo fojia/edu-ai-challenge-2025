@@ -1,0 +1,22 @@
+You are an expert in system architecture and database design. I want you to use Chain-of-Thought reasoning to help select the most suitable database type for a social platform with the following requirements. Think step-by-step and explain each factor before making a recommendation.
+
+Project Requirements:
+
+- The application is a social platform with millions of users.
+- It needs to store:
+
+    - User profiles
+    - User posts
+    - Connections (relationships) between users
+- The workload consists of 80% read operations and 20% write operations.
+- High data read speed is critical.
+- The system must be highly scalable as the user base is expected to grow significantly.
+
+Your Task:
+
+- Break down the requirements and analyze the implications of each (e.g., data model, performance, scalability).
+- Compare the advantages and trade-offs of different types of databases (e.g., relational, document, graph, key-value, wide-column).
+- Identify which database types are suitable or unsuitable for the given use case and why.
+- Justify your final recommendation step-by-step based on the needs above.
+- End with a clear recommendation of the best type of database for the platform.
+
