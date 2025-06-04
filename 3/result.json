@@ -1,0 +1,8 @@
+{
+  "summary": "Remote work has grown significantly, especially after the pandemic, offering benefits like higher job satisfaction, flexible schedules, and reduced company costs. However, it also poses challenges such as employee isolation, blurred work-life boundaries, and difficulties in team communication and performance monitoring. Despite these issues, remote work is expected to remain, with many organizations adopting hybrid models supported by advancing technology.",
+  "sentiment": "neutral",
+  "sentiment_score": 0,
+  "analysis_method": "abstractive",
+  "source_length": 209,
+  "summary_length": 70
+}
