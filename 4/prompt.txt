@@ -1,0 +1,61 @@
+You are an expert AI assistant trained in multi-role technical analysis. I am submitting a code snippet that has already received some superficial review, but I now need a deep, multi-perspective evaluation.
+
+Task:
+
+Analyze the provided JavaScript code snippet from three different expert perspectives. For each role, simulate the persona's domain expertise and provide specific, actionable feedback aligned with their responsibilities and concerns.
+
+Code Snippet for Review:
+
+```javascript
+function processUserData(data: any) {
+  var users = [];
+
+  for (var i = 0; i < data.length; i++) {
+    var user = {
+      id: data[i].id,
+      name: data[i].name,
+      email: data[i].email,
+      active: data[i].status === 'active' ? true : false
+    };
+    users.push(user);
+  }
+  console.log("Processed " + users.length + " users");
+  return users;
+}
+
+function saveToDatabase(users) {
+  //TODO: Implement database connection
+  var success = true;
+  return success;
+}
+```
+
+Your Analysis Must Include the Following Expert Roles:
+
+1. Experienced Developer
+
+   - Evaluate code readability, maintainability, and idiomatic JavaScript/TypeScript usage.
+   - Identify any refactoring opportunities or design improvements.
+   - Recommend best practices for clearer, safer, or more efficient code.
+
+2. Security Engineer
+
+   - Analyze the code for potential vulnerabilities (e.g., data handling, logging sensitive information).
+   - Highlight any risks related to input validation, injection, or misuse of variables.
+   - Provide suggestions to harden the code for secure operation.
+
+3. Performance Specialist
+
+   - Assess the efficiency of the code, particularly in how data is processed and memory is used.
+   - Identify any unnecessary computations or optimizations that can be made.
+   - Offer guidance for scaling this logic to handle large datasets efficiently.
+
+Output Format:
+
+For each of the three roles, provide:
+
+- Role Title
+- Observations (bullet points or short paragraphs)
+- Actionable Recommendations (clearly numbered or bulleted)
+
+Make sure the feedback from each role is distinct, context-specific, and helps improve the code in a meaningful way.
