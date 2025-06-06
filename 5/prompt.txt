@@ -1,0 +1,112 @@
+You are an AI assistant tasked with analyzing user feedback about a product. Your job is to assess whether the feedback is relevant to the product’s qualities or performance, and then extract structured insights accordingly.
+
+You will be shown a few examples of how to process feedback using reasoning and convert them into a structured JSON format. Use these examples to guide your output.
+
+Instructions:
+
+1. Determine relevance: If the feedback does not meaningfully address the product’s features, performance, usability, or quality, set `"isRelevant"` to `false` and skip the rest of the analysis (other fields can be left empty or null).
+2. Otherwise, use Chain-of-Thought reasoning to identify sentiment, subject, positives, pain points, improvement suggestions, mentioned features, and user expertise.
+3. Return the result in the exact JSON structure provided.
+4. Follow the patterns in the few-shot examples below.
+
+Example 1
+
+Feedback: "I've never been a fan of the GPX shape and to me, it feels like I am holding a potato. The front hump felt a bit intrusive on the backside of my knucles. Ergonomics are better on the Viper V3 PRO specially on the rear portion of the mouse and the side part where you rest/grip your fingers to hold the mouse."
+
+Analysis:
+The user makes a comparison to the GPX, highlighting specific ergonomic advantages of the Viper V3 PRO. The language suggests the user has experience and is expressing a preference.
+
+```json
+{
+"sentiment": "Positive",
+"isRelevant": true,
+"mainSubject": "Ergonomics and shape (compared favorably to GPX)",
+"positives": [
+"Ergonomics are better on the Viper V3 PRO",
+"Better rear portion ergonomics",
+"Better side grip area"
+],
+"painPoints": [],
+"improvementSuggestions": [],
+"featuresMentioned": [
+"Ergonomics",
+"Shape",
+"Rear design",
+"Side grip"
+],
+"userExpertise": "Experienced"
+}
+```
+
+Example 2
+
+Feedback: "If you are a GPX lover, I think they managed to improve everything I thought It was wrong about the GPX series, they made the shape better, they fixed the side buttons, scrolling wheel is better, gliding is faster and feels like the perfect compromise between control and speed."
+
+Analysis:
+The user discusses improvements over the GPX series, naming multiple features positively. This shows high familiarity with both products.
+
+```json
+{
+"sentiment": "Positive",
+"isRelevant": true,
+"mainSubject": "Feature improvements over competitor (GPX)",
+"positives": [
+"Better shape than GPX series",
+"Improved side buttons",
+"Better scrolling wheel",
+"Faster gliding with good control-speed balance"
+],
+"painPoints": [],
+"improvementSuggestions": [],
+"featuresMentioned": [
+"Shape",
+"Side buttons",
+"Scrolling wheel",
+"Gliding performance"
+],
+"userExpertise": "Experienced"
+}
+```
+
+Example 3
+
+Feedback: "I can't say I'm a fan of the material used for the shell, either—the plastic attracts fingerprints like a grease magnet and the mouse needed to be furiously cleaned, repeatedly, before any pictures could be taken. It also feels a bit on the cheap side, although that's mostly down to Razer's decision to make the Viper V3 Pro as light as possible."
+
+Analysis:
+The user is expressing dissatisfaction with the materials and their practicality. The sentiment is negative, and the issues are specific.
+
+```json
+{
+"sentiment": "Negative",
+"isRelevant": true,
+"mainSubject": "Material quality and feel",
+"positives": [],
+"painPoints": [
+"Shell material attracts fingerprints excessively",
+"Requires frequent cleaning",
+"Material feels cheap",
+"Design prioritizes weight over premium feel"
+],
+"improvementSuggestions": [
+"Use material that resists fingerprints better",
+"Improve perceived build quality while maintaining low weight"
+],
+"featuresMentioned": [
+"Shell material",
+"Build quality feel",
+"Weight"
+],
+"userExpertise": "Experienced"
+}
+```
+
+
+Now analyze the following feedbacks using the same logic and JSON format:
+
+Sample 1:
+"Sensor just stops tracking for like a half second kinda often even at 8000hz. I've also tried it plugged in and still the same problem. First one I got I had to return also because the dongle just didnt work, \$150 mouse btw"
+
+Sample 2:
+"Is it worth it? It is a product with no flaws in my opinion, if you love it go for it, but its not worth the price since you'll be able to perform the same with a cheaper product with half the specs."
+
+Output the result as an array with two separate JSON objects, one per feedback. Follow the previous format precisely.
