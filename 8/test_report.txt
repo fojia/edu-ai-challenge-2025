@@ -1,0 +1,96 @@
+
+> robust-validation-library@1.0.0 test:coverage
+> jest --coverage
+
+  console.log
+    Validation result: {
+      isValid: true,
+      errors: [],
+      value: {
+        id: '12345',
+        name: 'John Doe',
+        email: 'john@example.com',
+        age: undefined,
+        isActive: true,
+        tags: [ 'developer', 'designer' ],
+        address: {
+          street: '123 Main St',
+          city: 'Anytown',
+          postalCode: '12345',
+          country: 'USA'
+        },
+        metadata: undefined
+      }
+    }
+
+      at Object.log (schema.ts:443:9)
+
+PASS ./schema.test.ts
+  Schema Validation Library
+    StringValidator
+      ✓ should validate valid strings (2 ms)
+      ✓ should reject non-strings
+      ✓ should validate minimum length
+      ✓ should validate maximum length (1 ms)
+      ✓ should validate pattern (5 ms)
+      ✓ should support custom error messages (1 ms)
+      ✓ should handle optional strings
+      ✓ should chain multiple validations (1 ms)
+    NumberValidator
+      ✓ should validate valid numbers
+      ✓ should reject non-numbers
+      ✓ should reject NaN
+      ✓ should validate minimum value
+      ✓ should validate maximum value
+      ✓ should validate integer requirement
+      ✓ should handle optional numbers
+      ✓ should chain multiple validations
+    BooleanValidator
+      ✓ should validate valid booleans (1 ms)
+      ✓ should reject non-booleans
+      ✓ should handle optional booleans
+    DateValidator
+      ✓ should validate Date objects (1 ms)
+      ✓ should validate date strings (1 ms)
+      ✓ should validate timestamp numbers
+      ✓ should reject invalid dates
+      ✓ should validate minimum date (1 ms)
+      ✓ should validate maximum date
+      ✓ should handle optional dates
+    ArrayValidator
+      ✓ should validate arrays with valid items (1 ms)
+      ✓ should reject non-arrays
+      ✓ should validate individual items
+      ✓ should validate minimum items (1 ms)
+      ✓ should validate maximum items
+      ✓ should handle optional arrays
+      ✓ should work with complex item validators (1 ms)
+    ObjectValidator
+      ✓ should validate objects with valid properties
+      ✓ should reject non-objects
+      ✓ should validate individual properties (1 ms)
+      ✓ should handle optional properties
+      ✓ should handle nested objects
+      ✓ should handle optional objects
+    Complex Schema Integration
+      ✓ should validate complete valid user object (1 ms)
+      ✓ should validate user object without optional fields
+      ✓ should handle multiple validation errors (1 ms)
+      ✓ should handle nested validation errors
+    Error Messages
+      ✓ should use custom error messages when provided
+      ✓ should provide default error messages when custom not provided (1 ms)
+    Method Chaining
+      ✓ should support method chaining for all validators
+
+-----------|---------|----------|---------|---------|-------------------
+File       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------|---------|----------|---------|---------|-------------------
+All files  |   98.56 |    94.87 |     100 |   98.48 |                   
+ schema.ts |   98.56 |    94.87 |     100 |   98.48 | 235-236           
+-----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       46 passed, 46 total
+Snapshots:   0 total
+Time:        1.572 s, estimated 2 s
+Ran all test suites.
