@@ -1,0 +1,27 @@
+{
+  "word_count": 978,
+  "speaking_speed_wpm": 140,
+  "estimated_duration_minutes": 7.0,
+  "frequently_mentioned_topics": [
+    {
+      "topic": "Chest Pain",
+      "mentions": 15
+    },
+    {
+      "topic": "Heart Attack Concern",
+      "mentions": 8
+    },
+    {
+      "topic": "Symptoms Assessment",
+      "mentions": 12
+    },
+    {
+      "topic": "Medical History",
+      "mentions": 7
+    },
+    {
+      "topic": "Diagnostic Testing (ECG, Blood Work)",
+      "mentions": 4
+    }
+  ]
+}
