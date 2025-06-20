@@ -67,6 +67,6 @@ ehthumbs.db
 Thumbs.db
 
 # Output files
-*.md
+
 !README.md
 !sample_outputs.md
